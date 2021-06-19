@@ -26,6 +26,6 @@ steps:
 
 - task: Docker@2
   inputs:
-    containerRegistry: 'iftikharqureshi'
+    containerRegistry: 'service-connection-cr'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
