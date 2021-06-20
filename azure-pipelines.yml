@@ -18,6 +18,11 @@ steps:
 - task: GoTool@0
   inputs:
     version: '1.16'
+- task: Go@0
+  inputs:
+    command: 'test'
+    arguments: '-v'
+    workingDirectory: '$(modulePath)'
 
 - task: Go@0
   inputs:
