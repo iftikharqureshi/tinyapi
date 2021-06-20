@@ -16,15 +16,18 @@ steps:
     ArtifactName: 'drop'
 
 - task: GoTool@0
+  displayName: Go Tools
   inputs:
     version: '1.16'
 
 - task: Go@0
+  displayName: Run Tests
   inputs:
     command: 'test'
     workingDirectory: '$(Build.ArtifactStagingDirectory)'
 
 - task: Go@0
+  displayName: Build Go Project
   inputs:
     command: 'build'
     workingDirectory: '$(Build.ArtifactStagingDirectory)'
