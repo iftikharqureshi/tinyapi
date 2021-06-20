@@ -37,3 +37,4 @@ steps:
     containerRegistry: 'service-connection-cr'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+    repository: https://github.com/iftikharqureshi/tinyapi
