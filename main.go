@@ -7,13 +7,13 @@ import (
 )
 
 func handleRequest() {
-	http.HandleFunc("/", rootFunc)
+	http.HandleFunc("/", rootHandler)
 	log.Fatal(http.ListenAndServe(":8088", nil))
 }
 
-func rootFunc(w http.ResponseWriter, r *http.Request) {
+func rootHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello from root")
-	fmt.Println("In rootFunc")
+	log.Println("In Root Handler")
 }
 
 func main() {
